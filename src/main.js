@@ -1,13 +1,14 @@
-import './styles/index.less' // 公共的样式
+import './styles/index.less'
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-
 import store from './store'
+import '@/utils/datetime'
+
 // 表单验证
-import { ValidationProvider, ValidationObserver, extend } from 'vee-validate'// 核心组件
-import zhCN from 'vee-validate/dist/locale/zh_CN' // 加载验证插件的语言包
-import * as rules from 'vee-validate/dist/rules' // 验证规则
+import { ValidationProvider, ValidationObserver, extend } from 'vee-validate' // 核心组件
+import zhCN from 'vee-validate/dist/locale/zh_CN' // 中文语言包
+import * as rules from 'vee-validate/dist/rules'
 
 import {
   Button,
@@ -15,8 +16,19 @@ import {
   CellGroup,
   NavBar,
   Field,
-  Toast
-} from 'vant'
+  Toast,
+  Tabbar,
+  TabbarItem,
+  Tab,
+  Tabs,
+  List,
+  PullRefresh,
+  Grid,
+  GridItem,
+  Image,
+  Lazyload
+} from 'vant' // 验证规则
+
 Vue
   .use(Button)
   .use(Cell)
@@ -24,6 +36,16 @@ Vue
   .use(NavBar)
   .use(Field)
   .use(Toast)
+  .use(Tabbar)
+  .use(TabbarItem)
+  .use(Tab)
+  .use(Tabs)
+  .use(List)
+  .use(PullRefresh)
+  .use(Grid)
+  .use(GridItem)
+  .use(Image)
+  .use(Lazyload)
 
 // 配置使用中文语言
 for (let rule in rules) {
@@ -32,6 +54,7 @@ for (let rule in rules) {
     message: zhCN.messages[rule] // add its message
   })
 }
+
 // 注册为全局组件
 Vue.component('ValidationProvider', ValidationProvider)
 Vue.component('ValidationObserver', ValidationObserver)

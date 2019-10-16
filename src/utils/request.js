@@ -1,7 +1,7 @@
 // axios 请求相关操作封装到这里
-
 import axios from 'axios'
 import jsonBig from 'json-bigint'
+
 // 在非组件模块中使用容器就直接加载即可
 // 这里获取到的 store 和你在组件中的 this.$store 是一个东西
 import store from '@/store'

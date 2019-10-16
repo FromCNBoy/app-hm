@@ -51,7 +51,7 @@ export default {
   data () {
     return {
       user: {
-        mobile: '15100000000',
+        mobile: '15555555555',
         code: '246810'
       }
     }
