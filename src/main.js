@@ -26,7 +26,11 @@ import {
   Grid,
   GridItem,
   Image,
-  Lazyload
+  Lazyload,
+  Popup,
+  Icon,
+  Search,
+  Loading
 } from 'vant' // 验证规则
 
 Vue
@@ -46,6 +50,10 @@ Vue
   .use(GridItem)
   .use(Image)
   .use(Lazyload)
+  .use(Popup)
+  .use(Icon)
+  .use(Search)
+  .use(Loading)
 
 // 配置使用中文语言
 for (let rule in rules) {
